@@ -51,9 +51,9 @@ git lfs pull
 
 ```
 
-Upgraded `git lts` version 3.7.1: Nothing written to the `SHOULD_BE_EMPTY` directory
+Example using `git lts` version 3.6.0: file written to the `SHOULD_BE_EMPTY` directory
 
-<img width="851" height="789" alt="image" src="https://github.com/user-attachments/assets/41fd309a-1610-44f5-97dd-fe7e8ec5e229" />
+<img width="851" height="852" alt="image" src="https://github.com/user-attachments/assets/4893d041-33f4-4f6c-a9ca-18038fecd0e6" />
 
 
 Upgraded `git lts` version 3.7.1: Nothing written to the `SHOULD_BE_EMPTY` directory
