@@ -6,6 +6,9 @@
 **CVE-2025-26625** is a vulnerability affecting **Git LFS (Git Large File Storage)** versions **0.5.2 through 3.7.0**, where the commands  
 `git lfs checkout` and `git lfs pull` fail to properly validate symbolic links before writing to files in the working tree.
 
+An attacker would need to do some serious social engineering to pull off this attack as the victim will have to create the symbolic link themselves.
+The attacker vector for this is quite low/difficult because of this.
+
 Discovered and disclosed on **October 17, 2025**, this issue impacts all Git LFS installations released since version 0.5.2.  
 It was documented in both the **GitHub Security Advisory** and the **National Vulnerability Database (NVD)**.
 
