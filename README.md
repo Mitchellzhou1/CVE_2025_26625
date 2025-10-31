@@ -24,6 +24,7 @@ If those links point **outside the repository’s working tree**, the LFS proces
 ---
 
 ```
+# Machine A
 mkdir lfs-remote-demo && cd lfs-remote-demo
 git init
 git lfs install
@@ -32,6 +33,19 @@ mkdir data
 printf "REAL CONTENT\n" > data/file.bin
 git add .gitattributes data/file.bin
 git commit -m "Add LFS file"
+
+
+# Machine B
+git clone <the-remote-url> lfs-attack-demo
+cd lfs-attack-demo
+
+# At this point git has created "data" (a directory) and a pointer file or placeholder.
+# Now remove the directory and replace it with a symlink to /tmp (or another safe path)
+rm -rf data
+ln -s /tmp data
+
+# Now run git lfs pull
+git lfs pull
 
 ```
 
